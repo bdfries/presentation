@@ -4,9 +4,9 @@ const HomePage = (): JSX.Element =>
     (
         <DefaultLayout>
             <h1>Home Page</h1>
-            <h3>Enter the code</h3>
-            <input type="text" />
-            <button>Join</button>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis vero placeat praesentium assumenda expedita corporis quod nihil, neque tenetur libero qui pariatur deserunt veritatis hic molestiae, omnis quasi fugit similique? Tempora cumque delectus numquam voluptatum eaque. Nulla minus similique eaque numquam omnis voluptatem, explicabo repellat quod perspiciatis et consequatur ducimus.
+            </p>
         </DefaultLayout>
     );
 

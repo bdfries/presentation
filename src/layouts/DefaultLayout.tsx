@@ -1,3 +1,4 @@
+import PageNavigation from '../components/PageNavigation';
 import PageFooter from '../components/PageFooter';
 
 type DefaultLayoutProps = {
@@ -7,6 +8,7 @@ type DefaultLayoutProps = {
 const DefaultLayout = ({ children }: DefaultLayoutProps): JSX.Element =>
     (
         <>
+            <PageNavigation />
             {children}
             <PageFooter />
         </>

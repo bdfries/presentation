@@ -1,7 +1,10 @@
 import { combineReducers } from 'redux';
 
-const rootReduces = combineReducers({
+import socketReducer from './reducers/socketReducer';
 
+const rootReducer = combineReducers({
+    socket: socketReducer,
 });
 
-export default rootReduces;
+export type RootState = ReturnType<typeof rootReducer>;
+export default rootReducer;

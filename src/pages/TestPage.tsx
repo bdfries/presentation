@@ -6,12 +6,16 @@ import { RootState } from '../redux/rootReducer';
 
 const TestPage = (): JSX.Element => {
     const { mainSocket } = useSelector((state: RootState) => state.socket);
-    console.log(mainSocket);
 
     return (
         <DefaultLayout>
             <h1>Test Page</h1>
-            <button onClick={() => console.log('a')}>Next Slide</button>
+            <button onClick={() => {
+                mainSocket.emit('set_next_slide', -1);
+            }}>Previous Slide</button>
+            <button onClick={() => {
+                mainSocket.emit('set_next_slide', 1);
+            }}>Next Slide</button>
         </DefaultLayout>
     );
 }

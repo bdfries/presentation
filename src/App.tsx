@@ -9,6 +9,7 @@ import TestPage from './pages/TestPage';
 import PresentationPage from './pages/PresentationPage';
 import NotFoundPage from './pages/NotFoundPage';
 
+import { Dispatch } from 'redux';
 import socketActions from './redux/actions/socketActions';
 
 class App extends Component<any, any> {
@@ -17,7 +18,7 @@ class App extends Component<any, any> {
   }
 
   componentDidMount() {
-    const socket = io('http://localhost:3004');
+    const socket = io('http://localhost:3001');
     this.props.setMainSocket(socket);
   }
 
@@ -36,7 +37,7 @@ class App extends Component<any, any> {
   }
 }
 
-const mapDispatchToProps = (dispatch: any) => {
+const mapDispatchToProps = (dispatch: Dispatch) => {
   return {
     setMainSocket: (socket: any) => dispatch({
       type: socketActions.SET_MAIN_SOCKET,

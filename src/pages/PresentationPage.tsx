@@ -14,12 +14,19 @@ const PresentationPage = (): JSX.Element => {
     useEffect(() => {
         let isMounted = true;
         mainSocket && mainSocket.on('next_slide', (data: number) => {
-            isMounted && setSlideNumber(slideNumber => slideNumber + data);
+            if (isMounted) {
+                if (slideNumber > 0 && data == -1) {
+                    setSlideNumber(slideNumber => slideNumber + data);
+                } else if (slideNumber < testPresentation.slides.length - 1 && data == 1) {
+                    setSlideNumber(slideNumber => slideNumber + data);
+                }
+            }
         });
         return () => { isMounted = false };
-    }, [mainSocket]);
+    }, [mainSocket, slideNumber]);
 
-    const currentSlide = testPresentation.slides[slideNumber - 1];
+    const currentSlide = testPresentation.slides[slideNumber];
+    console.log(slideNumber);
     
     return (
         <DefaultLayout>

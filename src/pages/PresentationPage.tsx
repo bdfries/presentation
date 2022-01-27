@@ -26,7 +26,6 @@ const PresentationPage = (): JSX.Element => {
     }, [mainSocket, slideNumber]);
 
     const currentSlide = testPresentation.slides[slideNumber];
-    console.log(slideNumber);
     
     return (
         <DefaultLayout>

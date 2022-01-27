@@ -3,6 +3,13 @@ const testPresentation = {
         {
             id: 0,
             title: 'Slide 1',
+            points: [
+                'This is some information.',
+                'This is some information.',
+                'This is some information.',
+                'This is some information.',
+                'This is some information.',
+            ],
             questions: [
                 {
                     title: 'Question Slide 1',
@@ -21,6 +28,11 @@ const testPresentation = {
         {
             id: 1,
             title: 'Slide 2',
+            points: [
+                'This is some information.',
+                'This is some information.',
+                'This is some information.',
+            ],
             questions: [
                 {
                     title: 'Question Slide 2',
@@ -39,6 +51,12 @@ const testPresentation = {
         {
             id: 2,
             title: 'Slide 3',
+            points: [
+                'This is some information.',
+                'This is some information.',
+                'This is some information.',
+                'This is some information.',
+            ],
             questions: [
                 {
                     title: 'Question Slide 3',

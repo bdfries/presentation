@@ -8,7 +8,7 @@ import testPresentation from './presentations/testPresentation';
 import { RootState } from '../redux/rootReducer';
 
 const PresentationPage = (): JSX.Element => {
-    const [ slideNumber, setSlideNumber ] = useState(1);
+    const [ slideNumber, setSlideNumber ] = useState(0);
     const { mainSocket } = useSelector((state: RootState) => state.socket);
 
     useEffect(() => {
@@ -31,6 +31,12 @@ const PresentationPage = (): JSX.Element => {
         <DefaultLayout>
             <h1>Presentation</h1>
             <h3>{currentSlide.title}</h3>
+            <ul>
+                {currentSlide.points.map(
+                    (point, index) =>
+                    <li key={index}>{point}</li>
+                )}
+            </ul>
             <ul>
                 {currentSlide.questions.map(
                     (question, index) =>

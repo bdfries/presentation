@@ -13,6 +13,7 @@ const MainStyle = createGlobalStyle`
 
     body {
         font-size: 1.4rem;
+        font-family 'Open Sans', sans-serif;
     }
 `;
 

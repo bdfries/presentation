@@ -6,12 +6,12 @@ const PageNavigation = (): JSX.Element =>
         <x.nav
             display="flex"
             alignItems="center"
-            p={24}
+            p={10}
             w="100%"
         >
             <x.div
-                w={24}
-                h={24}
+                w={10}
+                h={10}
                 bg="#141414"
             />
             <x.ul
@@ -19,8 +19,8 @@ const PageNavigation = (): JSX.Element =>
                 ml="auto"
             >
                 <x.li><Link to="/">Home</Link></x.li>
-                <x.li ml={24}><Link to="/join">Join</Link></x.li>
-                <x.li ml={24}><Link to="/test">Test</Link></x.li>
+                <x.li ml={10}><Link to="/join">Join</Link></x.li>
+                <x.li ml={10}><Link to="/test">Test</Link></x.li>
             </x.ul>
         </x.nav>
     );

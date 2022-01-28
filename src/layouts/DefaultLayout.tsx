@@ -11,7 +11,7 @@ const DefaultLayout = ({ children }: DefaultLayoutProps): JSX.Element =>
     (
         <>
             <PageNavigation />
-            <x.div px={24}>
+            <x.div px={12}>
                 {children}
             </x.div>
             <PageFooter />

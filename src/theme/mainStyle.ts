@@ -12,7 +12,9 @@ const MainStyle = createGlobalStyle`
     }
 
     body {
-        font-size: 1.4rem;
+        background-color: pageBackground;
+        color: textColor;
+        font-size: 1.3rem;
         font-family 'Open Sans', sans-serif;
     }
 `;

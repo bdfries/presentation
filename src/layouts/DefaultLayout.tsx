@@ -1,3 +1,5 @@
+import { x } from '@xstyled/styled-components';
+
 import PageNavigation from '../components/PageNavigation';
 import PageFooter from '../components/PageFooter';
 
@@ -9,7 +11,9 @@ const DefaultLayout = ({ children }: DefaultLayoutProps): JSX.Element =>
     (
         <>
             <PageNavigation />
-            {children}
+            <x.div px={24}>
+                {children}
+            </x.div>
             <PageFooter />
         </>
     );

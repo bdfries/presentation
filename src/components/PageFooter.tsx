@@ -1,9 +1,11 @@
+import { x } from '@xstyled/styled-components';
+
 const PageFooter = (): JSX.Element =>
     (
-        <footer>
+        <x.footer p={24}>
             <hr />
             <p>Page Footer</p>
-        </footer>
+        </x.footer>
     );
 
 export default PageFooter;
